@@ -124,6 +124,9 @@
                 width="370"
                 height="294"
               />
+                <div class="work-overlay">
+                    Aplikacje komputerowe
+                </div>
             </li>
             <li class="work-item">
               <img
@@ -132,6 +135,9 @@
                 width="370"
                 height="294"
               />
+                <div class="work-overlay">
+                    Aplikacje mobilne
+                </div>
             </li>
             <li class="work-item">
               <img
@@ -140,6 +146,9 @@
                 width="370"
                 height="294"
               />
+                <div class="work-overlay">
+                    Rozwiązania graficzne
+                </div>
             </li>
           </ul>
         </div>
@@ -374,7 +383,7 @@
 
                   <div>
                       <div class="join-us">
-                          <p>Dołącz do nas</p>
+                          <p>DOŁĄCZ DO NAS</p>
                       </div>
                       <div class="foot-icons">
                           <ul class="social-media-list">
@@ -409,6 +418,22 @@
                           </ul>
                       </div>
                   </div>
+                  <div class="newsletter">
+                      <div class="join-us">
+                          <p>ZAPISZ SIĘ DO NEWSLETTERA</p>
+                      </div>
+                      <div class="newsletter__input-wrapper">
+                            <input class="newsletter__input" name="email" placeholder="E-mail"/>
+                            <button class="button newsletter__button">
+                                Zapisz się
+                                <svg class="newsletter-icon" width="24" height="24">
+                                    <use
+                                            href="images/icons.svg#icon-newsletter"
+                                    ></use>
+                                </svg>
+                            </button>
+                      </div>
+                  </div>
               </div>
               </div>
 
@@ -420,6 +445,60 @@
                 <use href="images/icons.svg#icon-x"></use>
             </svg>
         </button>
+        <div class="form-wrapper">
+            <h3 class="form-header">
+                Zostaw swoje dane w formularzu poniżej
+            </h3>
+            <form class="form">
+                <label>
+                    <span class="label">Imie</span>
+                    <div class="input-wrapper">
+                        <input class="input" name="name"/>
+                        <svg class="input-icon" width="12" height="12">
+                            <use href="images/icons.svg#name"
+                            ></use>
+                        </svg>
+                    </div>
+                </label>
+                <label>
+                    <span class="label">Telefon</span>
+                    <div class="input-wrapper">
+                        <input class="input" name="tel"/>
+                        <svg class="input-icon" width="13" height="13">
+                            <use href="images/icons.svg#tel"
+                            ></use>
+                        </svg>
+                    </div>
+                </label>
+                <label>
+                    <span class="label">Email</span>
+                    <div class="input-wrapper">
+                        <input class="input" name="email"/>
+                        <svg class="input-icon" width="15" height="12">
+                            <use href="images/icons.svg#message"
+                            ></use>
+                        </svg>
+                    </div>
+                </label>
+                <label>
+                    <span class="label">Komentarz</span>
+                    <div class="input-wrapper">
+                        <input class="input comment" name="comment"/>
+                    </div>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-controller">
+                    <div class="checkbox">
+                        <svg class="check-icon" width="11" height="8">
+                            <use href="images/icons.svg#check"
+                            ></use>
+                        </svg>
+                    </div>
+                    <span class="checkbox-text">Oświadczam iż akceptuję <span class="checkbox-link">Regulamin</span> i <span class="checkbox-link">Politykę Prywatności</span>. </span>
+                </label>
+                <button class="button form-button" type="submit">WYŚLIJ</button>
+            </form>
+        </div>
     </div>
  </div>
     <script src="./js/modal.js"></script>

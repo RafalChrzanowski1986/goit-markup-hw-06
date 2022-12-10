@@ -246,9 +246,27 @@ ul {
   width: fit-content;
   margin-top: 30px;
   padding: 10px 41px 10px 42px;
+  border: none;
 }
 .work-item {
   height: 294px;
+  position: relative;
+}
+
+.work-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
 }
 
 .list {
@@ -514,6 +532,36 @@ ul {
   display: flex;
 }
 
+.newsletter {
+  margin-left: 78px;
+}
+
+.newsletter__input-wrapper{
+  display: flex;
+}
+
+.newsletter__input {
+  height: 50px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  padding: 15px 16px;
+  font-size: 16px;
+  outline: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.newsletter-icon {
+  margin-left: 24px;
+}
+
+.newsletter__button {
+  margin-top: 0;
+  margin-left: 12px;
+  padding: 10px 28px 10px 42px;
+}
+
 .footer-icon {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -543,7 +591,6 @@ ul {
 .modal {
   position: absolute;
   width: 528px;
-  height: 581px;
   left: 50%;
   top: 50%;
   background: #ffffff;
@@ -553,123 +600,94 @@ ul {
   transition: transform 2s;
 }
 
-.button-x{
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-width: 1px;
+.form-wrapper {
+  padding: 40px;
 }
 
-.button-x:hover{
-  cursor: pointer;
-}
-
-
-.is-hidden {
-  transform: scale(0);
-}
-
-/*========PORTFOLIO=====*/
-
-.sectio{
-
-  margin-top: 94px;
-}
-
-.main-list{
-  margin-bottom: 50px;
-  padding-inline: 8px;
-  gap: 8px;
-}
-
-.button-portfolio {
-  font-family: Roboto;
-  border: none;
-  color: #212121;
-  background-color: #f5f4fa;
-  font-weight: 500;
-  line-height: 1.62;
-  font-size: 16px;
+.form-header {
+  font-size: 20px;
+  line-height: 1.15;
   text-align: center;
-  cursor: pointer;
-  background: #f5f4fa;
-  border-radius: 4px;
-  padding: 6px 22px;
-  margin-bottom: 50px;
-  
-}
-.button-portfolio:hover{
-  color: var(--white-color);
-  background-color: #2196f3;
-  /* shadow-middle */
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-  0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-wrap{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 16px;
-  letter-spacing: 0,06em;
-  color: #212121;
-  list-style-type: none;
-  text-align: justify;
-  padding: 20px 24px;
-
-  position: relative;
-  z-index: 1;
-  background-color: white;
+.form{
+  margin-top: 12px;
 }
 
-.portfolio-overlay {
-  position: absolute;
-  bottom: 0px;
-  height: 410px;
-  max-height: 0;
+.label {
+  color: var(--descriptions-color);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input {
   width: 100%;
-  background: rgba(33, 150, 243, 0.9);
+  height: 40px;
+  font-size: 12px;
+  font-family: Roboto;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  border-radius: 4px;
 
-  transition-property: max-height;
+  transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  padding: 49px 45px 0 25px;
-  color: #FFFFFF;
+  padding: 0 0 0 42px;
 }
 
-.overlay-text {
+.input-wrapper {
   position: relative;
-  z-index: 0;
-  line-height: 1.55;
-  font-size: 18px;
-  letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 
 
-
-
-
-.index p{
-  margin-top: 10px;}
-
-.footer-portfolio
-{
-  background-color: #2f303a;
-  width: 100%;
-  padding: 60px 0px;
+.input:focus {
+  border: 1px solid var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section {
-  padding: 94px 0;
+.input:focus .input-icon {
+  fill: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.no-padding-top {
-  padding-top: 0;
+.checkbox-label {
+  margin-top: 20px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
 }
+
+.checkbox-controller {
+  display: none;
+}
+
+.checkbox-controller:checked ~.checkbox {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.checkbox {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.checkbox-link:hover{
+  cursor: pointer;
+}
+
+.checkbox-text {
+  white-space: nowrap;
+  font-size: 14
